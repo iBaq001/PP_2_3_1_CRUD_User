@@ -15,9 +15,9 @@ public class StartPageController {
     @GetMapping(value = "/")
     public String printWelcome(ModelMap model) {
         List<String> messages = new ArrayList<>();
-        messages.add("Hello!");
-        messages.add("I'm Spring MVC application");
-        messages.add("5.2.0 version by sep'19 ");
+        messages.add("Привет!");
+        messages.add("Это CRUD приложение на базе Spring-mvs");
+        messages.add("Для начала нажми на ссылку ниже ");
         model.addAttribute("messages", messages);
         return "startPage";
     }

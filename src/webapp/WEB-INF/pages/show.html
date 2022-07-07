@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Пользователь</title>
+    <style>table th, table td {padding: 5px;}</style>
 </head>
 <body>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>id</th>
+        <th>age</th>
+        <th>email</th>
+    </tr>
+    <tr>
 
-<p th:text="${user.getName()}">VALUE</p>
-<p th:text="${user.getId()}">VALUE</p>
-<p th:text="${user.getAge()}">VALUE</p>
+        <td><p th:text="${user.getId()}">VALUE</p></td>
+        <td><p th:text="${user.getName()}">VALUE</p></td>
+        <td><p th:text="${user.getAge()}">VALUE</p></td>
+        <td><p th:text="${user.getEmail()}">VALUE</p></td>
+    </tr>
+</table>
 
 <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit</a>
 
