@@ -11,15 +11,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotEmpty(message = "Не заполнено имя ")
-    @Size(min = 2, max = 30, message = "Имя должно иметь длину от 2 до 30 символов")
+
     private String name;
 
-    @Min(value = 0, message = "Нельзя вводить отрицательный возраст")
     private int age;
 
-    @NotEmpty(message = "Не заполнен e-email")
-    @Email(message = "Не корректный e-mail")
     private String email;
 
     public User() {
